@@ -37,6 +37,6 @@ php -S localhost:8000
 # APP URL
 
 | URL       | Method |    |                                Description                                                           |
-|----------------|--------|------------------------------------------------------------------------------------------|
+|----------------|--------|------------------------------------|-----------------------------------------------------|
 | /categores     | GET    | (Task 1 ) Show all categories with total item and order categories by total Items (DESC).|
 | /items         | GET    | (Task 2 ) Categories and Parent Categories with Total Item Number                        |
