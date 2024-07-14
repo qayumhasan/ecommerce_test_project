@@ -13,6 +13,11 @@ class DB
     private static $params;
     private static $conn;
 
+    /**
+     * Create connection with database
+     *
+     * @return PDO
+     */
     public static function getConnection(): ?PDO
     {
         $default = Core::get('config')['default'];
