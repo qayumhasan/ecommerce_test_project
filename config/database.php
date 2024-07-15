@@ -1,8 +1,12 @@
 <?php
 use Dotenv\Dotenv;
-
-$dotenv = Dotenv::createImmutable(__DIR__ . '/..');
-$dotenv->load();
+$dotenvFilePath = __DIR__ . '/../.env';
+if (file_exists($dotenvFilePath)) {
+    $dotenv = Dotenv::createImmutable(__DIR__ . '/..');
+    $dotenv->load();
+} else {
+    die('.env file not found. Please create it.');
+}
 
 return [
     'default' => $_ENV['DB_CONNECTION'],
