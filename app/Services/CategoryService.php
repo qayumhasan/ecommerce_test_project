@@ -3,7 +3,10 @@ namespace App\Services;
 class CategoryService {
     private $rows;
 
-    public function __construct(array $rows) {
+     public function __construct(array|string $rows) {
+        if(!is_array($rows)){
+            exit($rows);
+        }
         $this->rows = $rows;
     }
     public function buildCategoryTreeWithTotalItems($parentId = null) {
